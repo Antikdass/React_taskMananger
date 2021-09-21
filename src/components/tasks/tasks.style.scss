@@ -1,0 +1,267 @@
+@import '../../styles/variables.scss';
+
+.tasks-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  .create {
+    transition: all 0.2s ease;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+
+}
+
+.tasks-container-home {
+  height: 100%;
+}
+
+.dialog-window-create {
+  width: 501px;
+  background: $yellow;
+}
+
+.task-div {
+  height: 180px;
+  padding: 0 20px;
+  background: $yellow;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border: gray solid 2px;
+  width: 380px;
+  margin: 25px;
+
+  .hr-div {
+    width: 100%;
+
+    .hr {
+      width: 93%;
+      background: rgba(0, 0, 0, 0.1);
+      height: 3px;
+      border-radius: 5px;
+    }
+  }
+
+  .button-edit {
+    transition: all 0.2s ease;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+  }
+  .button-edit:hover{
+    transform: scale(1.2)
+  }
+
+  .top-div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+    h2 {
+      margin: 0;
+    }
+
+    .title {
+      text-align: center;
+      max-width: 90%;
+      text-overflow: ellipsis;
+      overflow:hidden;
+    }
+  }
+
+  .bottom-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.description {
+  word-wrap: break-word;
+  white-space: pre-line;
+  word-break: break-word;
+}
+.delete-icon{
+  transition: all 0.2s ease;
+  &:hover{
+    transform: scale(1.2);
+  }
+}
+.complete-icon {
+  transition: all 0.2s ease;
+  &:hover{
+    transform: scale(1.2);
+  }
+}
+
+.task-completed-div {
+  background-image: url("../../assets/img/diagonal-line-png.png");
+
+  .button-edit {
+    display: none !important;
+  }
+
+  .title,
+  .description {
+    text-decoration: line-through;
+  }
+
+  .complete-delete {
+    justify-content: flex-end;
+
+    .complete-icon {
+      display: none !important;
+    }
+  
+  }
+}
+
+.complite {
+  border: black solid 2px;
+  width: 20%;
+  height: 20px;
+}
+
+
+.title-div {
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  width: 100%;
+  height: 10%;
+}
+
+.complete-delete {
+  padding-bottom: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.form-container {
+  height: 290px;
+  background: $yellow;
+
+  .form {
+    width: 450px;
+
+
+    .input {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+
+      .title-description-block {
+        padding: 0;
+        margin-bottom: 20px;
+        position: relative;
+
+      }
+
+      .description-block {
+        padding: 0;
+        position: relative;
+      }
+
+      .error-title {
+        top: 19px;
+        color: red;
+        position: absolute;
+      }
+
+      .error-description {
+        top: 155px;
+        color: red;
+        position: absolute;
+      }
+
+      .edit-title {
+        background-color: rgba(187, 177, 120, 0.4);
+        transition: all 0.2s ease;
+        border-radius: 5px;
+        border: 1px solid rgba(148, 140, 95, 0.4);
+        padding: 5px 5px 5px 5px;
+        font-size: 15px;
+        &:hover{
+          transform: scale(1.02);
+        }
+      }
+
+
+      .edit-description {
+        background-color: rgba(187, 177, 120, 0.4);
+        transition: all 0.2s ease;
+        border-radius: 5px;
+        border: 1px solid rgba(148, 140, 95, 0.4);
+        padding: 0px 5px 0px 5px;
+        font-size: 15px;
+        resize: none;
+        height: 150px;
+        &:hover{
+          transform: scale(1.02);
+        }
+      }
+
+      .edit-complete {
+        
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .button-submit {
+          transition: all 0.2s ease;
+          background: 0;
+          border: 0;
+          &:hover{
+            transform: scale(1.2);
+          }
+        }
+
+
+        .modal-delete {
+          transition: all 0.2s ease;
+          cursor: pointer;
+          &:hover{
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+.dialog {
+  background: $yellow;
+  padding: 10px;
+
+  .dialog-delete {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .dialog-button {
+      transition: all 0.2s ease;
+      background: 0;
+      border: 0;
+      &:hover{
+        transform: scale(1.2)
+      }
+    }
+  }
+}

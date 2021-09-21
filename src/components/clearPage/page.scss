@@ -1,0 +1,41 @@
+@import '../../styles/variables.scss';
+
+.empty-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  .img {
+    width: 110px;
+  }
+
+  .clear-page-text {
+    margin: 4px;
+    font-size: 30px;
+  }
+
+  .empty-page-add {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .empty-page-button {
+      transition: all 0.2s ease;
+      border: 0;
+      box-shadow: 2px 2px 8px 1px #535353;
+      font-size: 20px;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.9);
+      color: #acf0b2;
+      border-radius: 5px;
+      width: 100%;
+      margin: 5px;
+    }
+    .empty-page-button:hover{
+          transform: scale(1.1);
+    }
+  }
+}

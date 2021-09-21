@@ -1,0 +1,25 @@
+.alert-container {
+  display: flex;
+  align-items: flex-end;
+  width: 400px;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+
+  .alert {
+    background-color: rgb(61, 61, 61);
+    color: white;
+    width: 100%;
+  }
+}
+
+.alert-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.MuiAlert-message {
+  width: 100%;
+}
+
